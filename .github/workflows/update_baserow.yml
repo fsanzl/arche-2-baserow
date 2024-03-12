@@ -31,6 +31,7 @@ jobs:
           pip install -r requirements.txt
       - name: Creating JSON Files and uploading Arche Schema to Baserow
         run: |
+          mkdir -p json_dumps
           python scripts/arche2json.py
           python scripts/vocabs2json.py
           python scripts/arche2baserow.py
